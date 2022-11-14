@@ -1,0 +1,311 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #000000 !important; 
+}
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+}
+/* .search{
+    width:100%;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 0 0 ;
+} */
+/* .search-input{
+    width:600px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid floralwhite;
+    border-radius: 7px;
+    color: aliceblue;
+}
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1; 
+}
+.search-btn{
+    position: absolute;
+    color: aliceblue;
+    line-height: 35px;
+    margin-left: 540px;
+} */
+/*Font size*/
+
+.title{
+    font-size:20pt;
+    font-weight: bold;
+}
+.text{
+    font-size: 12pt !important;
+}
+
+
+/*------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  height: 36px !important;
+  border: 1px solid #ffffff;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #000000;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo{
+    justify-content: center;
+    align-content: center;
+}
+.logo-item{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #f2f2f2;
+    line-height: 50px;
+    margin: 0;
+    display: block;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login a{
+    line-height: 50px;
+    color: white;
+    font-size: 14pt;
+    font-weight: bold;
+}
+.login a:link, .login a:visited {
+    color: (internal value);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .login a:link:active, .login a:visited:active {
+    color: (internal value);
+  }
+/*-----------LOGIN-----------*/
+.modal-login{
+    width: 450px;
+    height: 650px;
+    background-color: rgba(0,0,0,.75) !important;
+}
+.login-wraper{
+    width: 315px;
+    height: 370px;
+    margin: auto;
+}
+
+.login-haeder{
+    color: white;
+    font-weight: bold;
+}
+.login-body{
+    margin: 35px 0 35px 0;
+}
+.username, .password{
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+}
+.username{
+    margin: 0px 0 15px 0;
+}
+*:focus{
+    outline: none !important;
+}
+.show__pass{
+    color: white;
+}
+.login-footer input{
+    width: 100%;
+    height: 40px;
+    margin-top: 35px;
+    background-color: #dc3545;
+    font-size: 14pt;
+    font-weight: bold;
+}
+.sign-up{
+    color: #737373;
+}
+/*-----------LOGIN-----------*/
+
+.slide, img{
+    width: 100% ;
+}
+.banner-item{
+    position: relative;
+}
+.description{
+    width: 530px;
+    margin-top: 315px;
+    margin-left: 135px;
+    position: absolute;
+    top: 0;
+}
+.description p{
+    color: #fff;
+ 
+}
+.Flim-list{
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+.Flim-list p{
+    font-size: 20pt;
+    color: #fff;
+    margin-top: 10px;
+}
+/*-----------navs-----------*/
+.genre-nav{
+    margin:20px 0 20px 0 ;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #dc3545 !important;
+}
+/*-----------navs-----------*/
+.flim-info{
+    color: #FFF;
+    margin-top: 5PX;
+}
+.flim-name{
+    width: initial;
+    height: 65px;
+}
+.flim-name, a{
+    color: #FFF;
+    font-size: 16pt;
+    
+}
+.flim-item{
+    width:90%;
+}
+.flim-item ,.genres{
+    color: #fff;
+}
+.flim-poster:hover{
+    box-shadow: 0px 0px 10px 1px rgb(170, 145, 145) ;
+    transition: 0.5s;
+  
+}
+
+.actor-slider{
+    background-color: rgba(254, 253, 253, 0.464);
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+#owl-carousel{
+    width: 100%;
+    margin-top: 5%;
+    position: absolute;
+}
+.actor-item{
+    /* background-color: #737373; */
+    text-align: center;
+}
+.actor-avt{
+    width: 190px !important;
+    height: 190px !important;
+    margin: auto !important;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.actor-name{
+    color: rgb(0, 0, 0);
+    margin: 5px 0 5px 0 !important;
+    font-weight: bold;
+    font-size: 14pt;
+}
+/*-----------flim modal-----------*/
+.flim-modal{
+    /* display: none ;  */
+    position: fixed; /* Stay in place */
+    z-index: 1100000000000000000000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.flim-modal-content {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    /* border: solid #737373;  */
+}
+.flim-modal-content-1{
+    width: 323.297px;
+    /* background-color:#737373 ; */
+    margin: auto;    
+    margin-top: 18px;
+}
+.flim-modal-content-1-img{
+    width: 323.297px;   
+}
+.ReleaseDate{
+    color: #ffffff;
+}
+.flim-modal-btn{
+    width:  323.297px;
+}
+
+
+
+
+
+/*-----------flim modal-----------*/
