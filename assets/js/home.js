@@ -1,15 +1,15 @@
-$(".carousel").carousel({
-    interval: false,
-  }
-);
+// $(".carousel").carousel({
+//     interval: false,
+//   }
+// );
 
-$(function () {
-    // Owl Carousel
-    var owl = $(".owl-carousel");
-    owl.owlCarousel({
-      items: 3,
-      margin: 10,
-      loop: true,
-      nav: true,
-    });
-  });
+// $(function () {
+//     // Owl Carousel
+//     var owl = $(".owl-carousel");
+//     owl.owlCarousel({
+//       items: 3,
+//       margin: 10,
+//       loop: true,
+//       nav: true,
+//     });
+//   });
