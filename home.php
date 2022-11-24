@@ -47,29 +47,7 @@
                         </div>
                     </form>
                 </div>
-                <?php
-        //Tìm kiếm
-        $Tenphim = "";
-        $Tenchude = "";
-        $Tendienvien = "";
-        if (isset($_POST['search_btn'])) {
-          // $Tenphim = $_GET["search"];
-          $sql = "SELECT * from chude inner join phim on chude.ID_chude=phim.ID_chude inner join list_actor on list_actor.ID_actor=phim.ID_actor 
-          where phim.Tenphim like '%$Tenphim' or Tenchude LIKE N'%$Tenchude'or list_actor like '%$Tendienvien'";
-          $result = mysqli_query($conn, $sql);
-          // $row = mysqli_fetch_array($result);
-          if ($row = mysqli_fetch_assoc($result)) {
-            echo "<script>location.href = './film.php';</script>";
-            //   echo "<br>" . $row['Tenphim'];
-            //   echo "<br>Diễn viên: " . $row['Tendienvien'];
-            //   echo "<br>Chủ đề: " . $row['Tenchude'];
-            //   echo "<br>Ngày công chiếu: " . $row['Ngaychieu'];
-            //   echo "<br>Tóm tắt nội dung phim: " . $row['TomtatND'];
-            // } else {
-            echo "Không tìm thấy phim";
-          }
-        }
-        ?>
+
             </div>
             <div class="col-3">
                 <div class="login">
@@ -102,7 +80,7 @@
                                         </script>
                                     </div>
                                     <div class="login-footer">
-                                        <input class="login-btn" type="submit" value="Log in" name="btn" />z
+                                        <input class="login-btn" type="submit" value="Log in" name="login" />
                                         <!-- <button type="submit" name="login">ĐK</button> -->
                                         <?php
                     include("connect.php");
@@ -121,7 +99,7 @@
                         $_SESSION['password'] = $row['password'];
                         // header('Location: ./film.php');
                         // exit();
-                        echo "<script>location.href = './film.php';</script>";
+                        echo "<script>location.href = './flim.php';</script>";
                       } else {
                         echo "<script>alert('not');</script>";
                       }
@@ -293,34 +271,7 @@
             </div>
         </div>
     </div>
-    <!--<div class="flim-modal">  the modal
-    <div class="flim-modal-content"> modal content
-      <div class="row m-0 p-0">
-        <div class="col-4">
-          <div class="flim-modal-content-1">
-            <img class="flim-modal-content-1-img" src="img/flim list/Poster (4).png" alt="">
-            <p class="ReleaseDate text ">30 September 2021</p>
-            <div class="flim-name">
-              <p >No time to die
-              </p>
-            </div>
-            <p class="genres text">Action, Adventure, Horror </p>
-            <button  type="button" class="flim-modal-btn btn btn-danger text" >
-              Xem phim 
-            </button>
-          </div>
-        </div>
-        <div class="col-8">
 
-        </div>
-      </div>
-    </div>          
-  </div>
-  <script>//flim-modal 
-    var modal = document.getElementsByClassName("flim-modal");//Get the modal
-    var btn = document.getElementsByClassName("flim-poster");//Get the button that opens the modal
-    
-  </script> -->
     <script>
     //owlCarousel
     $(function() {

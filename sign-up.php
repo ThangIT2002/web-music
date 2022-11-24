@@ -48,7 +48,7 @@
                 <input type="text" placeholder="Họ và tên" required name="fullName" class="fullName" />
                 <input type="text" placeholder="Tên đăng nhập" required name="username" class="username" />
                 <input type="password" placeholder="Mật khẩu" required name="password" class="password" />
-                <input type="password" placeholder="Nhập lại mật khẩu" required name="re-password" class="password" />
+                <input type="password" placeholder="Nhập lại mật khẩu" required name="re_password" class="password" />
             </div>
             <div class="row">
                 <input type="checkbox" name="hide_password" class="hide col-2 ml-2" />
@@ -65,12 +65,41 @@
                 </script>
             </div>
             <div class="sign-up-footer">
-                <input class="login-btn" type="submit" value="Đăng ký" name="btn" />
+                <input class="login-btn" type="submit" value="Đăng ký" name="signup" />
             </div>
         </form>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
 </body>
 
 </html>
+<?php
+include("connect.php");
+$fullName = "";
+$username = "";
+$password = "";
+$re_password = "";
+if (isset($_POST['signup'])) {
+  $fullName = $_POST['fullName'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $re_password = $_POST['re_password'];
+  $sql = "SELECT*FROM taikhoan where username='$fullName' and acc='$username' and password='$password'";
+  $result = mysqli_query($conn, $sql);
+  if ($password != $re_password) {
+    echo "<script>alert('Nhập lại mật khẩu');</script>";
+  }
+  if (mysqli_num_rows($result) > 0) {
+    echo "<script>alert('Đã tồn tại tài khoản này');</script>";
+  } else {
+    $sql = "INSERT INTO taikhoan(username,acc,password)
+                                        VALUES('$fullName','$username','$password')";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+      echo "<script>alert('Bạn đã đăng kí thành công');</script>";
+    }
+  }
+}
+?>
